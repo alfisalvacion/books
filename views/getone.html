@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get One Book</title>
+    <link rel="stylesheet" href="/static/stylesheets/main.css">
+  </head>
+  <body>
+    <h1>Get a Book</h1>
+    <a href="/list"><button>Back to List</button></a>
+
+    <div class="container">
+      <h2>get a book</h2>
+      <form class="" action="/getone" method="get">
+        <div class="">
+          <input required type="number" name="id" placeholder="book id">
+        </div>
+        <button>Get</button>
+      </form>
+    </div>
+
+    <div class="list-container">
+      {% if data == false %}
+        <p class="no-item">No Search</p>
+      {% else %}
+        <p class="list-item">{{ id }} : {{ title }} by {{ author }}</p>
+      {% endif %}
+    </div>
+
+  </body>
+</html>

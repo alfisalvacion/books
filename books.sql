@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS books;
+CREATE DATABASE books;
+
+\c books;
+
+CREATE TABLE book (
+  ID SERIAL PRIMARY KEY,
+  title VARCHAR(30),
+  author VARCHAR(30)
+);
